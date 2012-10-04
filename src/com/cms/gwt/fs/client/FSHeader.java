@@ -16,7 +16,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class FSHeader extends Composite {
 
-	/** The About dialog of the application. */
+	/** The About dialog of the application. */ abc
 	private static DialogBox aboutDialog;
 
 	/** The main panel of the header. */
