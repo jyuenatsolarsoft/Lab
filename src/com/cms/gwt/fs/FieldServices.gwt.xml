@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.7.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.7.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='fieldservices'>
+
+  
+  <inherits name='com.google.gwt.user.User' />
+  <inherits name='com.google.gwt.user.theme.standard.Standard' /> 
+  <!--  <inherits name='com.google.gwt.user.theme.chrome.Chrome' /> --> 
+  <inherits name='com.google.gwt.inject.Inject' />  
+  <inherits name='com.cms.gwt.common.Common' /> 
+  
+  <inherits name='org.cobogw.gwt.user.User' />
+  <inherits name="eu.future.earth.gwt.FtrGwtDate" />
+  <inherits name="com.gwtextux.GwtExtUx" />
+
+  <extend-property name="locale" values="en"/>
+  <set-property name="locale" value="en" />
+  
+
+	<generate-with class="com.cms.gwt.fs.generator.FactoryGenerator" >
+  		<when-type-assignable class="com.cms.gwt.fs.client.reflection.FactoryWrapper" />
+ 	</generate-with>     
+
+  <!-- <stylesheet src="Core.css" /> -->
+  
+    <!-- ********************************************************************************* -->    
+  	<!-- Log setting starts from here                                                      -->
+  	<!-- ********************************************************************************* -->
+  
+    <!-- This setting is used in production to turn the logger completely off. -->
+    <!-- Add gwt-log support, default level `OFF` -->
+    <inherits name="com.allen_sauer.gwt.log.gwt-log-OFF" />
+	<extend-property name="log_level" values="INFO, ERROR, DEBUG"/> 
+    <!-- End of production setting -->
+
+    <!-- Inherit the trace module here. -->
+    <!-- <inherits name='com.allen_sauer.gwt.log.gwt-log-DEBUG' /> -->                   
+    <!-- <extend-property name="log_level" values="TRACE, DEBUG, INFO, WARN, ERROR, FATAL"/> --> 
+    <!-- <set-property    name="log_level" value="ERROR" /> -->
+
+    <set-property name="log_DivLogger" value="DISABLED" />
+    
+    <!-- Turn on the `RemoteLogger` -->    
+    <set-property name="log_RemoteLogger" value="ENABLED" />
+    
+    <!--  Log pattern setting. -->
+    <!-- <set-configuration-property name="log_pattern" value="%d [%-5p] %m%n" /> -->
+    <set-configuration-property name="log_pattern" value="%d [%-5p] %m%n" />
+
+    <!-- ********************************************************************************* -->    
+  	<!-- Log setting ends here.                                                            -->
+  	<!-- ********************************************************************************* -->
+      
+    
+  <entry-point class='com.cms.gwt.fs.client.FieldServices' />
+  
+  <servlet path="/XMLDataServices" class="com.cms.gwt.fs.server.XMLDataServicesImpl"/>
+  <servlet path="/loginServices" class="com.cms.gwt.fs.server.LoginServicesImpl"/>
+  
+  <!-- This servlet entry is required for the gwt log remote logger.
+         It allows gwt log to send the trace back to the server. -->
+    <servlet path="/gwt-log" class="com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl" />
+  
+</module>
