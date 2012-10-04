@@ -4,6 +4,7 @@ import com.google.gwt.i18n.client.Messages;
 
 public interface TextConstants extends Messages {
 
+// test
 	String ServiceTicketList();
 	String ServiceTicket(String arg);
 	String SkillsPanel(String arg);
