@@ -6,7 +6,7 @@ package com.cms.gwt.fs.client;
  */
 public class HistoryConstants {
 
-	public static String TOKEN_SPLITTER = ";";
+	public static String TOKEN_SPLITTER = "changed this";
 	public static String TOKEN_SPLITTER_REGEX = "\\;";
 	public static String VALUE_SPLITTER = ":";
 	public static String VALUE_SPLITTER_REGEX = "\\:";
@@ -30,7 +30,7 @@ public class HistoryConstants {
 	public static String SERVICE_TICKET_ADVANCE_TRUE = "T";
 	public static String SERVICE_TICKET_ADVANCE_FALSE = "F";
 
-	public static String TAB_PANEL_KEY = "stT";
+	public static String TAB_PANEL_KEY = "stT"; //test
 	public static String TAB_PANEL_VALUE = TAB_PANEL_KEY + VALUE_SPLITTER
 			+ "{0}" + TOKEN_SPLITTER;
 	public static String TAB_PANEL_REGEX = "stT\\:[0-9]{0,2}\\;";

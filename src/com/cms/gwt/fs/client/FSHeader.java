@@ -18,7 +18,6 @@ public class FSHeader extends Composite {
 
 	/** The About dialog of the application. */ abc
 	private static DialogBox aboutDialog; 
-
 	/** The main panel of the header. */ abc
 	private HorizontalPanel outer;
 
