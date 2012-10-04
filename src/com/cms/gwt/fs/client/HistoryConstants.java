@@ -6,7 +6,7 @@ package com.cms.gwt.fs.client;
  */
 public class HistoryConstants {
 
-	public static String TOKEN_SPLITTER = ";";
+	public static String TOKEN_SPLITTER = "changed this";
 	public static String TOKEN_SPLITTER_REGEX = "\\;";
 	public static String VALUE_SPLITTER = ":";
 	public static String VALUE_SPLITTER_REGEX = "\\:";
