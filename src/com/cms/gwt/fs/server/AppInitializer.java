@@ -9,7 +9,7 @@ public class AppInitializer implements ServletContextListener {
 
 	public void contextDestroyed(ServletContextEvent sce) {
 		// Empty method
-		
+		abc
 	}
 
 	public void contextInitialized(ServletContextEvent sce) {
