@@ -23,7 +23,7 @@ public class XMLDataServicesImpl extends RemoteServiceServlet implements XMLData
 	private static Logger logger = Trace.getLogger(XMLDataServicesImpl.class);
 		
 	/**
-	 * {@inheritDoc}
+	 * {@inheritDoc} testing
 	 */
 	@SuppressWarnings("unchecked")	
 	public <T extends Response> T execute(Request<T> request) throws AuthenticationException, DataServicesException {
